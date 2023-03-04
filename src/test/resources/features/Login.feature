@@ -6,3 +6,4 @@ Feature: Login functionality
     When user enters username and password
     And user click to login button
     Then user should go to homepage
+
