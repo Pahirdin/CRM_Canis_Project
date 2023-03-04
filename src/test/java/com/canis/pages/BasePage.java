@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public abstract class BasePage {
+public class BasePage {
 
     public BasePage(){
         PageFactory.initElements(Driver.getDriver(),this);
@@ -59,6 +59,9 @@ public abstract class BasePage {
 
     @FindBy(xpath = "//div[@class='menu-popup-items']")
     public List<WebElement> moreButtonHomepageElements;
+
+    @FindBy(xpath = "//span[@class='menu-items-title-text']")
+    public WebElement configureMenu;
 
 
 

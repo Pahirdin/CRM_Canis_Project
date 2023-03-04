@@ -8,6 +8,8 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
+import java.util.List;
+
 public class B28G10_87_Login_StepDefinitions {
 
     LoginPage loginPage = new LoginPage();
@@ -54,6 +56,7 @@ public class B28G10_87_Login_StepDefinitions {
         loginPage.login(wrongUsername, wrongPassword);
 
     }
+
     @Then("display “Incorrect username or password”")
     public void display_incorrect_username_or_password() {
 
@@ -84,6 +87,32 @@ public class B28G10_87_Login_StepDefinitions {
         }
 
         loginPage.login(username, password);
+
+
+
+    }
+
+    @Given("user is already logged in to CRM as {string} \\(check all userType)")
+    public void userIsAlreadyLoggedInToCRMAsCheckAllUserType(String userType) {
+
+
+        String username = "";
+        String password = "";
+
+
+        if (userType.equalsIgnoreCase("helpDesk")) {
+            username = ConfigurationReader.getProperty("helpDesk_username");
+            password = ConfigurationReader.getProperty("helpDesk_password");
+        } else if (userType.equalsIgnoreCase("humanResources")) {
+            username = ConfigurationReader.getProperty("humanResources_username");
+            password = ConfigurationReader.getProperty("humanResources_password");
+        } else if (userType.equalsIgnoreCase("marketing")) {
+            username = ConfigurationReader.getProperty("marketing_username");
+            password = ConfigurationReader.getProperty("marketing_password");
+        }
+
+        loginPage.login(username, password);
+
 
 
     }

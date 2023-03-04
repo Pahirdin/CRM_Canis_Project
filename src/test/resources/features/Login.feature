@@ -8,10 +8,10 @@ Feature: Login functionality
 
 
   Scenario: Pre-Condition
+     # when you want test specific userType
     Given user is already logged in to CRM as "userType"
-                                             #  ↑↑↑↑↑
+                                             #  ↑↑↑↑↑    change the userType to follow userTypes
                                              # userType:  helpDesk   humanResources   marketing
-
 
 
   Scenario Outline: Negative login scenario
@@ -27,4 +27,6 @@ Feature: Login functionality
       | abc123@gmail.com              | UserUser      |
       | wrong@hotmail.com             | UserUser      |
       | pass_this_test@hotmail.com    | PassMe5678    |
+
+
 
