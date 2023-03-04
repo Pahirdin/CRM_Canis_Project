@@ -7,9 +7,8 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.devtools.v107.domsnapshot.model.StringIndex;
 
-public class Login_StepDefinitions {
+public class B28G10_87_Login_StepDefinitions {
 
     LoginPage loginPage = new LoginPage();
 
