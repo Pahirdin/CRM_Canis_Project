@@ -9,7 +9,6 @@ Feature: Verify users can access to 6 options under the CONFIGURE MENU.
     |humanResources|
     |marketing|
 
-
     When user click configure menu
     Then user can access below 6 options
       | Configure Menu Items               |

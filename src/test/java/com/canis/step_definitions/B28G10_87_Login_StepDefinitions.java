@@ -20,8 +20,8 @@ public class B28G10_87_Login_StepDefinitions {
     @When("user login as {string}")
     public void user_login_as(String userType) {
 
-        String username = "marketing1@cybertekschool.com";
-        String password = "UserUser";
+        String username = "";
+        String password = "";
 
 
         if (userType.equalsIgnoreCase("helpDesk")) {
@@ -68,8 +68,8 @@ public class B28G10_87_Login_StepDefinitions {
     public void userIsAlreadyLoggedInToCRMAs(String userType) {
 
 
-        String username = "marketing1@cybertekschool.com";
-        String password = "UserUser";
+        String username = "";
+        String password = "";
 
 
         if (userType.equalsIgnoreCase("helpDesk")) {
