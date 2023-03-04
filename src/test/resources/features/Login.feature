@@ -8,9 +8,8 @@ Feature: Login functionality
 
 
   Scenario: Pre-Condition
-     # when you want test specific userType
     Given user is already logged in to CRM as "userType"
-                                             #  ↑↑↑↑↑    change the userType to follow userTypes
+                                             #  ↑↑↑↑↑    change the userType to specific userType
                                              # userType:  helpDesk   humanResources   marketing
 
 
