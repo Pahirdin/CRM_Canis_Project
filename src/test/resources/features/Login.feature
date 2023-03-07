@@ -7,10 +7,32 @@ Feature: Login functionality
     Then user should go to homepage
 
 
+  #----------------------------------------------------
+    # for other members ↓↓↓↓↓↓↓↓
+
+    # if you only want to check one specific userType ↓↓↓↓↓↓↓↓
   Scenario: Pre-Condition
     Given user is already logged in to CRM as "helpDesk"
                                              #  ↑↑↑↑↑    change the userType to specific userType
                                              # userType:  helpDesk   humanResources   marketing
+
+
+  # if you want to check all userType at once ↓↓↓↓↓↓↓↓
+  Scenario Outline: Pre-Condition
+    Given user is already logged in to CRM as following "<userType>".
+    # Put the main code here
+    # Put the main code here
+    # Put the main code here
+    Examples:
+      | userType       |
+      | helpDesk       |
+      | humanResources |
+      | marketing      |
+
+
+#----------------------------------------------------
+
+
 
 
   Scenario Outline: Negative login scenario
