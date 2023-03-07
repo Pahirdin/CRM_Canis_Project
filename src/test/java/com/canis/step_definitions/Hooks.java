@@ -13,7 +13,7 @@ public class Hooks {
 
     /*
     @Before
-    public void setUp (){
+    public void setupMethod(){
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
     }
 
