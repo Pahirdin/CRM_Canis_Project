@@ -11,10 +11,13 @@ import org.openqa.selenium.TakesScreenshot;
 
 public class Hooks {
 
+    /*
     @Before
     public void setUp (){
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
     }
+
+     */
 
     @After
     public void tearDownMethod(Scenario scenario){
