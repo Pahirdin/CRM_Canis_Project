@@ -34,7 +34,7 @@ public class B28G10_99_Company_StepDefinitions {
         WebElement topMenuModules = companyPage.topMenuModules;
         Assert.assertTrue(topMenuModules.isDisplayed());
         List<String> actualResult = BrowserUtils.string_to_ListOfString(topMenuModules.getText());
-        Assert.assertTrue(actualResult.containsAll(actualResult));
+        Assert.assertTrue(actualResult.containsAll(expectedResult));
     }
 
 
