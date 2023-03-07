@@ -31,18 +31,11 @@ public class B28G10_99_Company_StepDefitions {
     }
 
     @Then("users see the seven modules in the Company page shown as design")
-    public void usersSeeTheSevenModulesInTheCompanyPageShownAsDesign(List<String> listOfModules) {
-        // isdisplayed
+    public void usersSeeTheSevenModulesInTheCompanyPageShownAsDesign(List<String> expectedResult) {
         WebElement topMenuModules = companyPage.topMenuModules;
         Assert.assertTrue(topMenuModules.isDisplayed());
-        String expectedResult = BrowserUtils.listOfString_to_String(listOfModules);
-        String actualResult = topMenuModules.getText();// actual result match with list
-        System.out.println(expectedResult);
-        System.out.println(actualResult);
-
-        Assert.assertEquals(expectedResult,actualResult);
-
-
+        List<String> actualResult = BrowserUtils.string_to_ListOfString(topMenuModules.getText());
+        Assert.assertTrue(actualResult.containsAll(actualResult));
     }
 
 

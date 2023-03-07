@@ -7,7 +7,7 @@ Feature: Company Page Functionality
     Given user is already logged in to CRM
     When user clicks on the Company page
     Then users see the seven modules in the Company page shown as design
-      | Official information |
+      | Official Information |
       | Our Life             |
       | About Company        |
       | Photo Gallery        |

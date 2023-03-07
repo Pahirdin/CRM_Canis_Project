@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
 
@@ -525,6 +526,15 @@ public class BrowserUtils {
 
 
     }
+
+    public static List<String> string_to_ListOfString(String words){
+
+        List<String> strings = Arrays.asList(words.split("\n"));
+
+        return strings;
+    }
+
+
 
 
 }
