@@ -14,10 +14,12 @@ public class B28G10_87_Login_StepDefinitions {
 
     LoginPage loginPage = new LoginPage();
 
-    @Given("user is on the login page")
+   @Given("user is on the login page")
     public void user_is_on_the_login_page() {
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
     }
+
+
 
     @When("user login as {string}")
     public void user_login_as(String userType) {
@@ -70,7 +72,7 @@ public class B28G10_87_Login_StepDefinitions {
     @Given("user is already logged in to CRM as {string}")
     public void userIsAlreadyLoggedInToCRMAs(String userType) {
 
-        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
+     Driver.getDriver().get(ConfigurationReader.getProperty("url"));
 
         String username = "";
         String password = "";
@@ -93,8 +95,10 @@ public class B28G10_87_Login_StepDefinitions {
 
     }
 
-    @Given("user is already logged in to CRM as {string} \\(check all userType)")
-    public void userIsAlreadyLoggedInToCRMAsCheckAllUserType(String userType) {
+
+
+    @Given("user is already logged in to CRM as following {string}.")
+    public void userIsAlreadyLoggedInToCRMAsFollowing(String userType) {
 
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
 
@@ -118,7 +122,6 @@ public class B28G10_87_Login_StepDefinitions {
 
 
     }
-
 }
 
 
