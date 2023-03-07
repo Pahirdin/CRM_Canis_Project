@@ -19,7 +19,6 @@ public class Hooks {
 
      */
 
-
     @After
     public void tearDownMethod(Scenario scenario){
 
