@@ -9,12 +9,11 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-public class B28G10_99_Company_StepDefitions {
+public class B28G10_99_Company_StepDefinitions {
     LoginPage loginPage = new LoginPage();
 
     CompanyPage companyPage = new CompanyPage();
@@ -37,7 +36,6 @@ public class B28G10_99_Company_StepDefitions {
         List<String> actualResult = BrowserUtils.string_to_ListOfString(topMenuModules.getText());
         Assert.assertTrue(actualResult.containsAll(actualResult));
     }
-
 
 
 }
