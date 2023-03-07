@@ -1,15 +1,20 @@
 package com.canis.step_definitions;
 
 import com.canis.utilities.BrowserUtils;
+import com.canis.utilities.ConfigurationReader;
 import com.canis.utilities.Driver;
 import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
 public class Hooks {
 
-
+    @Before
+    public void setUp (){
+        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
+    }
 
     @After
     public void tearDownMethod(Scenario scenario){
