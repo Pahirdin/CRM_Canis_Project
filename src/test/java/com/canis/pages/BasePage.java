@@ -63,6 +63,26 @@ public class BasePage {
     @FindBy(xpath = "//span[@class='menu-items-title-text']")
     public WebElement configureMenu;
 
+    @FindBy(xpath = "//div[@class='menu-popup-items']/span/span[2]")
+    public WebElement configureMenuItems;
+
+    @FindBy(xpath = "//div[@class='menu-popup-items']/span[2]/span[2]")
+    public WebElement collapseMenu;
+
+    @FindBy(xpath = "//div[@class='menu-popup-items']/span[3]/span[2]")
+    public WebElement removeCurrentPageFromLeftMenu;
+
+    @FindBy(xpath = "//div[@class='menu-popup-items']/span[4]/span[2]")
+    public WebElement addCustomMenuItem;
+
+    @FindBy(xpath = "//div[@class='menu-popup-items']/span[5]/span[2]")
+    public WebElement changePrimaryTool;
+
+    @FindBy(xpath = "//div[@class='menu-popup-items']/span[6]/span[2]")
+    public WebElement resetMenu;
+
+
+
 
 
 
