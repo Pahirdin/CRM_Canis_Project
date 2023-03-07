@@ -2,6 +2,7 @@ package com.canis.utilities;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.time.Duration;
 
@@ -57,7 +58,7 @@ public class Driver {
 
                 case "firefox":
                     //  WebDriverManager.firefoxdriver().setup();
-                    driverPool.set(new ChromeDriver());
+                    driverPool.set(new FirefoxDriver());
                     driverPool.get().manage().window().maximize();
                     driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
                     break;
