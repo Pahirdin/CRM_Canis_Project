@@ -8,7 +8,7 @@ Feature: Login functionality
 
 
   Scenario: Pre-Condition
-    Given user is already logged in to CRM as "userType"
+    Given user is already logged in to CRM as "helpDesk"
                                              #  ↑↑↑↑↑    change the userType to specific userType
                                              # userType:  helpDesk   humanResources   marketing
 
