@@ -6,7 +6,6 @@ Feature: Chat and Calls Module Access
      Given user is already logged in to CRM as following "<userType>".
      When User navigate to the Chat and Calls module
      Then User should see a list of my submodules
-
   Examples:
       | userType       |
       | helpDesk       |
