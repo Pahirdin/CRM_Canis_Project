@@ -3,6 +3,7 @@ package com.canis.step_definitions;
 import com.canis.pages.BasePage;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 
 public class B28G10_98_ConfigureMenu_StepDefinition {
 
@@ -18,12 +19,12 @@ public class B28G10_98_ConfigureMenu_StepDefinition {
     @Then("user sees below options")
     public void userSeesBelowOptions() {
 
-        basePage.configureMenuItems.isDisplayed();
-        basePage.collapseMenu.isDisplayed();
-        basePage.removeCurrentPageFromLeftMenu.isDisplayed();
-        basePage.addCustomMenuItem.isDisplayed();
-        basePage.changePrimaryTool.isDisplayed();
-        basePage.resetMenu.isDisplayed();
+        Assert.assertTrue(basePage.configureMenuItems.isDisplayed());
+        Assert.assertTrue(basePage.collapseMenu.isDisplayed());
+        Assert.assertTrue(basePage.removeCurrentPageFromLeftMenu.isEnabled());
+        Assert.assertTrue(basePage.addCustomMenuItem.isDisplayed());
+        Assert.assertTrue(basePage.changePrimaryTool.isDisplayed());
+        Assert.assertTrue(basePage.resetMenu.isDisplayed());
 
     }
 }
