@@ -1,0 +1,22 @@
+package com.canis.pages;
+
+import com.canis.utilities.Driver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import java.util.List;
+
+public class MyProfilePage extends BasePage{
+
+    public MyProfilePage() {
+        PageFactory.initElements(Driver.getDriver(), this);
+    }
+
+        @FindBy(xpath = "//span[.='My Profile']")
+    public WebElement userMyProfile;
+    @FindBy(xpath = "//div[@id='profile-menu-filter']/child::*")
+    public List<WebElement> menuList;
+
+
+}
