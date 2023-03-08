@@ -2,7 +2,7 @@ Feature: Time and Reports page
   Agile story: As a user, I want to access the Time and Reports page.
 
 
-  @timeAndReport
+  @B28G10-128
   Scenario Outline: Verify the users view all modules in the Time and Reports page.
     Given user is already logged in to CRM as following "<userType>".
     When user clicks on Time and Reports module
