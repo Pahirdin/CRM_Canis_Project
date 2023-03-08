@@ -14,8 +14,8 @@ import org.junit.runner.RunWith;
 
         features = "src/test/resources/features",
         glue = "com/canis/step_definitions",
-        dryRun = true,
-        tags = "@B28G10-90",
+        dryRun = false,
+        tags = "@desktop",
         publish = true  // generating a report with public link
 
 )

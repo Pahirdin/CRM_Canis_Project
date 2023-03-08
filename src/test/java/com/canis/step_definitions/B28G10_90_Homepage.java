@@ -8,14 +8,17 @@ import com.canis.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
+
+import java.util.List;
 
 public class B28G10_90_Homepage {
     LoginPage loginPage= new LoginPage();
     HomepagePage homepagePage = new HomepagePage();
 
-    @Given("user is on CRM home page as {string}")
+    @Given("User is on CRM home page as {string}")
     public void userIsOnCRMHomePageAs(String username) {
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
         loginPage.login(username);
@@ -29,7 +32,16 @@ public class B28G10_90_Homepage {
 
     }
 
-    @Then("user should  be able to see {int} options for the desktop version")
-    public void userShouldBeAbleToSeeOptionsForTheDesktopVersion(int arg0) {
+    @Then("user should  be able to see three options for the desktop version")
+    public void userShouldBeAbleToSeeOptionsForTheDesktopVersion(List<String> expectedOptions) {
+        // expectedOptions =[MAC OS,WINDOWS,LINUX]
+        WebElement desktopClientOptions = homepagePage.desktopClientOptions;
+        System.out.println(desktopClientOptions.getText());
+        System.out.println("--------------------");
+        System.out.println(expectedOptions);
+
+
     }
+
+
 }
