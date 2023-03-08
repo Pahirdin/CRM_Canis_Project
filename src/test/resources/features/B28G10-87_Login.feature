@@ -1,10 +1,32 @@
 Feature: Login functionality
   Agile story: As a user, I should be able to log in to the CRM.
 
-  Scenario: Login function verification
+  @B28G10-140
+  Scenario Outline: Login function verification
     Given user is on the login page
-    When user login as "humanResources"
+    When user login as "<userType>"
     Then user should go to homepage
+    Examples:
+      | userType       |
+      | helpDesk       |
+      | humanResources |
+      | marketing      |
+
+  @B28G10-141
+  Scenario Outline: Negative login scenario
+    Given user is on the login page
+    When user enter "<wrongUsername>" or "<wrongPassword>"
+    Then display “Incorrect username or password”
+
+    Examples:
+      | wrongUsername                 | wrongPassword |
+      | helpdesk1@cybertekschool.com  | 123456        |
+      | hr1@cybertekschool.com        | home123       |
+      | marketing1@cybertekschool.com | 112233asd     |
+      | abc123@gmail.com              | UserUser      |
+      | wrong@hotmail.com             | UserUser      |
+      | pass_this_test@hotmail.com    | PassMe5678    |
+
 
 
   #----------------------------------------------------
@@ -34,20 +56,6 @@ Feature: Login functionality
 
 
 
-
-  Scenario Outline: Negative login scenario
-    Given user is on the login page
-    When user enter "<wrongUsername>" or "<wrongPassword>"
-    Then display “Incorrect username or password”
-
-    Examples:
-      | wrongUsername                 | wrongPassword |
-      | helpdesk1@cybertekschool.com  | 123456        |
-      | hr1@cybertekschool.com        | home123       |
-      | marketing1@cybertekschool.com | 112233asd     |
-      | abc123@gmail.com              | UserUser      |
-      | wrong@hotmail.com             | UserUser      |
-      | pass_this_test@hotmail.com    | PassMe5678    |
 
 
 
