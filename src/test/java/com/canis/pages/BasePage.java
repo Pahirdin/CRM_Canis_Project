@@ -39,6 +39,9 @@ public class BasePage {
     @FindBy(xpath = "//div[@title='Activity Stream ']")
     public WebElement activeStreamModule;
 
+    @FindBy(xpath = "//span[contains(., 'Time and Reports')]")
+    public WebElement timeAndReports;
+
     @FindBy(xpath = "//div[@class='menu-popup']")
     public List<WebElement> userProfileMenu;
 
