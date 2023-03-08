@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-      plugin = {
+        plugin = {
                 "json:target/cucumber.json",
                 "html:target/cucumber-report.html",
                 "rerun:target/rerun.txt",
@@ -16,10 +16,11 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/canis/step_definitions",
         dryRun = false,
-        tags = "",
+        tags = "@desktop",
         publish = true  // generating a report with public link
 
 
 )
 
-public class CukesRunner {}
+public class CukesRunner {
+}
