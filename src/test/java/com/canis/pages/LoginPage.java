@@ -1,5 +1,6 @@
 package com.canis.pages;
 
+import com.canis.utilities.ConfigurationReader;
 import com.canis.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -7,9 +8,9 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
 
-    public LoginPage(){
+    public LoginPage() {
 
-        PageFactory.initElements(Driver.getDriver(),this);
+        PageFactory.initElements(Driver.getDriver(), this);
 
     }
 
@@ -36,24 +37,30 @@ public class LoginPage {
 
     /**
      * This method will log in with below credential
+     *
      * @username : Test
      * @password : Tester
      */
 
-    public void login(){
+    public void login() {
         this.userLoginBox.sendKeys("Test");
         this.userPasswordBox.sendKeys("Tester");
         this.loginButton.click();
     }
 
 
-    public void login(String username, String password){
+    public void login(String username, String password) {
         this.userLoginBox.sendKeys(username);
         this.userPasswordBox.sendKeys(password);
         this.loginButton.click();
     }
 
-
-
-
+    public void login(String username) {
+        String extendUsername = "_username";
+        String extendPassword = "_password";
+        userLoginBox.sendKeys(ConfigurationReader.getProperty(username + extendUsername));
+        userPasswordBox.sendKeys(ConfigurationReader.getProperty(username + extendPassword));
+        loginButton.click();
+    }
 }
+
