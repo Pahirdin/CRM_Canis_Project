@@ -30,36 +30,12 @@ public class B28G10_88_LoginSaveCredentials_StepDefinitions extends LoginPage {
         userPasswordBox.sendKeys(password);
     }
 
-    //@When("user login as {string}")
-    //    public void user_login_as(String userType) {
-    //
-    //        String username = "";
-    //        String password = "";
-    //
-    //
-    //        if (userType.equalsIgnoreCase("helpDesk")) {
-    //            username = ConfigurationReader.getProperty("helpDesk_username");
-    //            password = ConfigurationReader.getProperty("helpDesk_password");
-    //        } else if (userType.equalsIgnoreCase("humanResources")) {
-    //            username = ConfigurationReader.getProperty("humanResources_username");
-    //            password = ConfigurationReader.getProperty("humanResources_password");
-    //        } else if (userType.equalsIgnoreCase("marketing")) {
-    //            username = ConfigurationReader.getProperty("marketing_username");
-    //            password = ConfigurationReader.getProperty("marketing_password");
-    //        }
-
     @When("clicks on Remember me checkbox")
     public void clicks_on_remember_me_checkbox() {
         rememberMeCheckBox.click();
     }
 
-    /*
-    @When("clicks on SignIn button")
-    public void clicks_on_sign_in_button() {
-        loginButton.click();
-    }
 
-     */
     @Then("user should be able to save credentials")
     public void user_should_be_able_to_save_credentials() {
         Assert.assertTrue(rememberMeCheckBoxText.isDisplayed());
