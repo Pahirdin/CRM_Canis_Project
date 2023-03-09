@@ -18,11 +18,7 @@ public class B28G10_90_Homepage_StepDefinitions {
     LoginPage loginPage = new LoginPage();
     HomepagePage homepagePage = new HomepagePage();
 
-    @Given("User is on CRM home page as {string}")
-    public void userIsOnCRMHomePageAs(String username) {
-        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
-        loginPage.login(username);
-    }
+
 
     @When("user scroll down to see the desktop client options")
     public void userScrollDownToSeeTheDesktopClientOptions() {
