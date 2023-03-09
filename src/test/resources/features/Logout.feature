@@ -1,6 +1,6 @@
 Feature:
   User Story: As a user, I should be able to log out from the CRM app.
-@wip2
+
 
 
   Scenario Outline: Pre-Condition
@@ -13,5 +13,11 @@ Feature:
       | helpDesk       |
       | humanResources |
       | marketing      |
+
+
+
+
+
+
 
 

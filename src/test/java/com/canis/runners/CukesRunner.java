@@ -15,6 +15,7 @@ import org.junit.runner.RunWith;
 
         features = "src/test/resources/features",
         glue = "com/canis/step_definitions",
+
          dryRun = false,
         tags ="" ,
         publish = true  // generating a report with public link
@@ -22,4 +23,5 @@ import org.junit.runner.RunWith;
 
 )
 
-public class CukesRunner {}
+public class CukesRunner {
+}
