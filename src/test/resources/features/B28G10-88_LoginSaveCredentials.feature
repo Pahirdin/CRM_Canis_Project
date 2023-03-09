@@ -1,7 +1,7 @@
 Feature: CRM Login feature verification
   Agile story: As a user, I should be able to save my user credential on a computer
 
-  @Nick
+  @B28G10-134
   Scenario Outline: User can save credentials on Log in page
     Given user is on the login page
     When user log in as "<userType>"

@@ -8,6 +8,7 @@ Feature: Verify configure menu.
      # 'Configure Menu Items''Collapse menu''Remove current page from left menu''Add custom menu item''Change primary tool'''Reset menu
 
 
+  @B28G10-143 @wip
   Scenario Outline: All different userType can see the options in Configure Menu
     Given user is already logged in to CRM as following "<userType>".
     When user click configure menu
