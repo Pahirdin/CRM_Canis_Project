@@ -10,12 +10,11 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 
 import java.util.List;
 
-public class B28G10_90_Homepage {
+public class B28G10_90_Homepage_StepDefinitions {
     LoginPage loginPage = new LoginPage();
     HomepagePage homepagePage = new HomepagePage();
 
@@ -37,7 +36,7 @@ public class B28G10_90_Homepage {
         WebElement desktopClientOptions = homepagePage.desktopClientOptions;
         Assert.assertTrue(desktopClientOptions.isDisplayed());
         List<String> actualOptions = BrowserUtils.string_to_ListOfString(desktopClientOptions.getText());
-        Assert.assertTrue(actualOptions.containsAll(expectedOptions));
+        Assert.assertEquals(expectedOptions,actualOptions);
 
 
     }
