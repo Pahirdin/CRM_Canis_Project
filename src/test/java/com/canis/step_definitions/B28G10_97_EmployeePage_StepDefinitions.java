@@ -1,6 +1,6 @@
 package com.canis.step_definitions;
 
-import com.canis.pages.B28G10_97_Ahmad;
+import com.canis.pages.EmployeePage;
 import com.canis.pages.LoginPage;
 import com.canis.utilities.BrowserUtils;
 import com.canis.utilities.ConfigurationReader;
@@ -13,9 +13,9 @@ import org.openqa.selenium.Dimension;
 
 import java.util.List;
 
-public class US97_StepDefs {
+public class B28G10_97_EmployeePage_StepDefinitions {
 
-    B28G10_97_Ahmad b28G10_97_Ahmad = new B28G10_97_Ahmad();
+    EmployeePage employeePage = new EmployeePage();
     LoginPage loginPage = new LoginPage();
     @Given("User is already in ctisSolution page")
     public void user_is_already_in_ctis_solution_page() {
@@ -30,13 +30,13 @@ public class US97_StepDefs {
     }
     @When("User click the employee page")
     public void user_click_the_employee_page() {
-        b28G10_97_Ahmad.emplyeesTab.click();
+        employeePage.emplyeesTab.click();
 
     }
 
     @Then("User see all below modules")
     public void user_see_all_below_modules(List<String> expectedTab) {
-        List<String>  actualTabs = BrowserUtils.getElementsText(b28G10_97_Ahmad.emplyeesTabs);
+        List<String>  actualTabs = BrowserUtils.getElementsText(employeePage.emplyeesTabs);
 
 
         System.out.println(actualTabs);
