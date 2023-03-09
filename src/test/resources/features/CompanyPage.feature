@@ -1,4 +1,4 @@
-
+@company
 Feature: The Company Page Functionality
   B28G10-99
   US:As a user, I should be able to access to the Company page .
@@ -11,7 +11,7 @@ Feature: The Company Page Functionality
     |About Company       |
     |Photo Gallery       |
     |Video               |
-    |Business News(RSS)  |
+    |Business News (RSS) |
     |Career              |
 
 
