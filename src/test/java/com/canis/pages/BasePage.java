@@ -84,7 +84,8 @@ public class BasePage {
     @FindBy(xpath = "//div[@class='menu-popup-items']/span[6]/span[2]")
     public WebElement resetMenu;
 
-
+    @FindBy(xpath = "//span[normalize-space()='Drive']")
+    public WebElement driveButton;
 
 
 
