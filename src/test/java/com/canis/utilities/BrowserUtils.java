@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
 
@@ -57,13 +58,13 @@ public class BrowserUtils {
 
     }
 
-    public static void verifyTitle( String expectedTitle){
+    public static void verifyTitle(String expectedTitle) {
 
-        Assert.assertEquals(Driver.getDriver().getTitle(),expectedTitle);
+        Assert.assertEquals(Driver.getDriver().getTitle(), expectedTitle);
 
     }
 
-    public static void verifyTitleContains(String expectedTitle){
+    public static void verifyTitleContains(String expectedTitle) {
 
         Assert.assertTrue(Driver.getDriver().getTitle().contains(expectedTitle));
 
@@ -74,7 +75,7 @@ public class BrowserUtils {
     and waits for that WebElement not to be displayed on the page
      */
 
-    public static void waitForInvisibilityOf(WebElement target){
+    public static void waitForInvisibilityOf(WebElement target) {
         // Create the object of "WebDriverWait" class, and set up the constructor args
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
 
@@ -87,7 +88,7 @@ public class BrowserUtils {
     and waits for that Title to contain certain given String value.
      */
 
-    public static void waitForTitleContains(String title){
+    public static void waitForTitleContains(String title) {
         // Create the object of "WebDriverWait" class, and set up the constructor args
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
 
@@ -97,11 +98,12 @@ public class BrowserUtils {
 
     /**
      * This method accepts a dropdown element and returns a List<String> that contains all options values as String.
+     *
      * @param dropdownElement
      * @return actualMonth_as_STRING
      */
 
-    public static List<String> dropdownOption_as_STRING(WebElement dropdownElement){
+    public static List<String> dropdownOption_as_STRING(WebElement dropdownElement) {
 
         Select month = new Select(dropdownElement);
         //Storing all the ACTUAL options into a List of WebElements
@@ -120,10 +122,10 @@ public class BrowserUtils {
         return actualMonth_as_STRING;
     }
 
-    public static void clickRadioButton(List<WebElement> radioButton, String attributeValue){
+    public static void clickRadioButton(List<WebElement> radioButton, String attributeValue) {
 
         for (WebElement each : radioButton) {
-            if(each.getAttribute("value").equalsIgnoreCase(attributeValue)){
+            if (each.getAttribute("value").equalsIgnoreCase(attributeValue)) {
                 each.click();
             }
         }
@@ -132,14 +134,16 @@ public class BrowserUtils {
 
     /**
      * This method will accept a String as expected value and verify actual URL CONTAINS the value.
+     *
      * @param expectedInURL
      */
-    public static void verifyURLContains(String expectedInURL){
+    public static void verifyURLContains(String expectedInURL) {
         Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains(expectedInURL));
     }
 
     /**
      * Switches to new window by the exact title. Returns to original window if target title not found
+     *
      * @param targetTitle
      */
     public static void switchToWindow(String targetTitle) {
@@ -396,6 +400,7 @@ public class BrowserUtils {
 
     /**
      * Highlighs an element by changing its background and border color
+     *
      * @param element
      */
     public static void highlight(WebElement element) {
@@ -491,8 +496,9 @@ public class BrowserUtils {
     }
 
     /**
-     *  checks that an element is present on the DOM of a page. This does not
-     *    * necessarily mean that the element is visible.
+     * checks that an element is present on the DOM of a page. This does not
+     * * necessarily mean that the element is visible.
+     *
      * @param by
      * @param time
      */
@@ -500,7 +506,33 @@ public class BrowserUtils {
         new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(time)).until(ExpectedConditions.presenceOfElementLocated(by));
     }
 
+    /**
+     * get a list of String and convert them to a String for dropDown format.
+     *
+     * @param list
+     * @return String
+     */
+    public static String listOfString_to_String(List<String> list) {
+        String result = "";
+        for (int i = 0; i < list.size(); i++) {
 
+            if (i == list.size() - 1) {
+                result += list.get(i);
+            } else {
+                result += list.get(i) + "\n";
+            }
+        }
+        return result;
+
+
+    }
+
+    public static List<String> string_to_ListOfString(String words){
+
+        List<String> strings = Arrays.asList(words.split("\n"));
+
+        return strings;
+    }
 
 
 
