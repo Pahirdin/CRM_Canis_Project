@@ -7,8 +7,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class B28G10_97_Ahmad {
-    public B28G10_97_Ahmad(){
+public class EmployeePage {
+    public EmployeePage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
