@@ -1,6 +1,6 @@
 Feature: Login functionality
   Agile story: As a user, I should be able to log in to the CRM.
-
+@wip
   Scenario: Login function verification
     Given user is on the login page
     When user login as "humanResources"
