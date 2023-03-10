@@ -1,13 +1,12 @@
 package com.canis.step_definitions;
 
-import com.canis.pages.BasePage;
 import com.canis.pages.DrivePage;
 import com.canis.utilities.Driver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-public class B28G10_DriveStepDefinitions_Syed extends DrivePage{
+public class B28G10_95_Drive_StepDefinitions extends DrivePage{
 
     DrivePage drivePage = new DrivePage();
 
