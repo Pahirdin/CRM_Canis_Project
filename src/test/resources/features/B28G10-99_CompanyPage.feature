@@ -1,4 +1,3 @@
-@company
 
 Feature: The Company Page Functionality
   @B28G10-145
