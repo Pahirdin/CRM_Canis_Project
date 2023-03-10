@@ -1,7 +1,7 @@
 Feature: More tab Access
   AGILE STORY: As a user I should be able to access the More module
 
-  @B28G10-116 @wip
+  @B28G10-116
   Scenario Outline: Accessing the More module
 
     Given user is already logged in to CRM as following "<userType>".
