@@ -1,7 +1,7 @@
 Feature: CRM User menu functionality
   Agile story: As a user, I want to access my profile page
 
-  @user
+  @B28G10-136
   Scenario Outline: Access My Profile from User menu
     Given user is already logged in to CRM as "<userType>"
     When user clicks on user profile
